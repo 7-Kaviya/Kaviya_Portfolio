@@ -4,9 +4,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Kaviya V — Portfolio" },
-      { name: "description", content: "Kaviya V — final-year IT student at Loyola-ICAM. Front-end, data, and automation projects." },
+      { name: "description", content: "Kaviya V — IT Graduate from Loyola-ICAM. Front-end, data, and automation projects." },
       { property: "og:title", content: "Kaviya V — Portfolio" },
-      { property: "og:description", content: "Final-year IT student at Loyola-ICAM. Front-end, data, and automation projects." },
+      { property: "og:description", content: "IT Graduate from Loyola-ICAM. Front-end, data, and automation projects." },
     ],
   }),
   component: Home,
@@ -14,18 +14,18 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-16 md:px-10 md:py-24">
+    <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 md:px-10 md:py-24">
       {/* Intro */}
       <section>
         <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">
           <span className="h-2 w-2 rounded-full bg-accent" />
-          Open to Jobs
+          Open to full-time jobs
         </div>
-        <h1 className="mt-6 font-display text-4xl leading-tight md:text-5xl">
+        <h1 className="mt-6 font-display text-3xl leading-tight sm:text-4xl md:text-5xl">
           Hi, I'm Kaviya — an <em className="text-accent">IT undergrad</em> who likes building things for the web.
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          Final-year B.Tech (IT) at Loyola-ICAM, Chennai. I work mostly with React & TypeScript, dabble in Python for data, and write Playwright tests when something needs automating.
+          IT Graduate from Loyola-ICAM, Chennai. I work mostly with React & TypeScript, dabble in Python for data, and write Playwright tests when something needs automating.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -42,11 +42,11 @@ function Home() {
       </section>
 
       {/* Quick facts */}
-      <section className="mt-20 grid gap-8 border-t border-border pt-10 md:grid-cols-3">
+      <section className="mt-16 grid gap-8 border-t border-border pt-10 sm:grid-cols-2 md:mt-20 md:grid-cols-3">
         {[
           { k: "Education", v: "B.Tech IT, Loyola-ICAM", sub: "CGPA 8.87 · 2022 – 2026" },
           { k: "Based in", v: "Tamil Nadu, India", sub: "Open to remote / relocate" },
-          { k: "Currently", v: "Looking for Jobs", sub: "Front-end · Data · QA" },
+          { k: "Currently", v: "Looking for jobs", sub: "Front-end · Data · QA" },
         ].map((f) => (
           <div key={f.k}>
             <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{f.k}</p>
@@ -68,8 +68,8 @@ function Home() {
 
       {/* Recent work preview */}
       <section className="mt-20">
-        <div className="flex items-end justify-between">
-          <div>
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div className="min-w-0">
             <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Recent work</p>
             <h2 className="mt-2 font-display text-2xl md:text-3xl">A few things I've built</h2>
           </div>

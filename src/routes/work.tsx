@@ -14,13 +14,13 @@ export const Route = createFileRoute("/work")({
 
 function Work() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16 md:px-10 md:py-24">
+    <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 md:px-10 md:py-24">
       <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Work</p>
       <h1 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
         Projects & internships.
       </h1>
       <p className="mt-4 text-base text-muted-foreground">
-        A mix of academic projects and internship work.
+        A mix of projects and internship work.
       </p>
 
       {/* Internships */}
@@ -88,9 +88,9 @@ const experience = [
     company: "Tech Mahindra",
     period: "Jan – Feb 2026",
     points: [
-      "Wrote automated test scripts for the OrangeHRM web application.",
-      "Built Playwright test suites covering form submission, navigation, and UI flows.",
-      "Used GitHub Copilot to speed up writing and refining test cases.",
+      "Reduced manual regression testing time by automating 20+ browser test cases for OrangeHRM using Playwright across Chrome, Firefox, and WebKit environments.",
+      "Accelerated test script development by integrating GitHub Copilot into the workflow, cutting average script authoring time by ~40% through AI-assisted code generation.",
+      "Strengthened test coverage by building end-to-end suites covering form validation, navigation flows, and UI state assertions — replicating real user journeys across all tested modules.",
     ],
   },
   {
@@ -106,6 +106,19 @@ const experience = [
 ];
 
 const projects = [
+  {
+    title: "Nexux Platform",
+    tag: "Web App",
+    period: "Apr – May 2026",
+    summary: "A personal finance dashboard for tracking income and expenses.",
+    bullets: [
+      "Orchestrated a full-stack web application using Angular 14, Node.js, Express, and TypeScript with role-based authentication and JWT security.",
+      "Crafted responsive dashboard and admin modules with reusable Angular components, routing, and interceptors.",
+      "Implemented RESTful APIs for user management, authentication, and record handling with CRUD operations.",
+      "Designed modular frontend structure and backend middleware for authentication and request handling."
+    ],
+    stack: ["Angular", "TypeScript", "Node.js", "Express"],
+  },
   {
     title: "Finalysis — Finance Dashboard",
     tag: "Web App",

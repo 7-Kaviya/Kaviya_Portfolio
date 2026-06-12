@@ -1,6 +1,14 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { useState } from "react";
 
 import appCss from "../styles.css?url";
+
+const navLinks = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/work", label: "Work" },
+  { to: "/contact", label: "Contact" },
+] as const;
 
 function NotFoundComponent() {
   return (
@@ -30,10 +38,10 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Kaviya V — Developer & Designer" },
-      { name: "description", content: "Portfolio of Kaviya V — Information Technology student, full-stack developer, and data enthusiast based in Tamil Nadu, India." },
+      { name: "description", content: "Portfolio of Kaviya V — IT Graduate, full-stack developer, and data enthusiast based in Tamil Nadu, India." },
       { name: "author", content: "Kaviya V" },
       { property: "og:title", content: "Kaviya V — Developer & Designer" },
-      { property: "og:description", content: "Portfolio of Kaviya V — Information Technology student, full-stack developer, and data enthusiast." },
+      { property: "og:description", content: "Portfolio of Kaviya V — IT Graduate, full-stack developer, and data enthusiast." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -74,22 +82,18 @@ function RootComponent() {
 }
 
 function SiteHeader() {
+  const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10">
-        <Link to="/" className="group flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary font-display text-base text-primary-foreground transition-transform group-hover:rotate-12">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 md:px-10 md:py-5">
+        <Link to="/" onClick={() => setOpen(false)} className="group flex min-w-0 items-center gap-2">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary font-display text-base text-primary-foreground transition-transform group-hover:rotate-12">
             K
           </span>
-          <span className="font-display text-lg tracking-tight">Kaviya V</span>
+          <span className="truncate font-display text-base tracking-tight sm:text-lg">Kaviya V</span>
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
-          {[
-            { to: "/", label: "Home" },
-            { to: "/about", label: "About" },
-            { to: "/work", label: "Work" },
-            { to: "/contact", label: "Contact" },
-          ].map((l) => (
+          {navLinks.map((l) => (
             <Link
               key={l.to}
               to={l.to}
@@ -107,9 +111,49 @@ function SiteHeader() {
           rel="noopener noreferrer"
           className="hidden items-center gap-2 rounded-full bg-accent px-5 py-2 text-sm font-medium text-accent-foreground transition-transform hover:scale-105 md:inline-flex"
         >
-          Resume ↗
+          Resume
         </a>
+        <button
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+          className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground md:hidden"
+        >
+          <span className="relative block h-3 w-4">
+            <span className={`absolute left-0 top-0 h-0.5 w-4 bg-current transition-transform ${open ? "translate-y-1.5 rotate-45" : ""}`} />
+            <span className={`absolute left-0 top-1.5 h-0.5 w-4 bg-current transition-opacity ${open ? "opacity-0" : ""}`} />
+            <span className={`absolute left-0 top-3 h-0.5 w-4 bg-current transition-transform ${open ? "-translate-y-1.5 -rotate-45" : ""}`} />
+          </span>
+        </button>
       </div>
+      {open && (
+        <nav className="border-t border-border/60 bg-background md:hidden">
+          <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3 sm:px-6">
+            {navLinks.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                activeOptions={{ exact: l.to === "/" }}
+                className="rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                activeProps={{ className: "rounded-lg px-3 py-2 text-sm bg-secondary text-foreground" }}
+              >
+                {l.label}
+              </Link>
+            ))}
+            <a
+              href="/Kaviya-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-2 text-sm font-medium text-accent-foreground"
+            >
+              Resume ↗
+            </a>
+          </div>
+        </nav>
+      )}
     </header>
   );
 }
@@ -122,7 +166,7 @@ function SiteFooter() {
         <div className="flex gap-4 text-sm text-muted-foreground">
           <a href="mailto:kaviya0733@gmail.com" className="hover:text-accent">Email</a>
           <a href="https://github.com/7-Kaviya" target="_blank" rel="noopener noreferrer" className="hover:text-accent">GitHub</a>
-          <a href="https://linkedin.com/in/kaviya-v" target="_blank" rel="noopener noreferrer" className="hover:text-accent">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/kaviya-v-034648256/" target="_blank" rel="noopener noreferrer" className="hover:text-accent">LinkedIn</a>
         </div>
       </div>
     </footer>
