@@ -22,10 +22,10 @@ function About() {
 
       <div className="mt-8 space-y-4 text-base leading-relaxed text-muted-foreground">
         <p>
-          I'm an IT Graduate from <span className="text-foreground">Loyola-ICAM College of Engineering and Technology</span>, Chennai — graduating April 2026 with a CGPA of <span className="text-foreground">8.87</span>.
+          I'm an IT Graduate from <span className="text-foreground">Loyola-ICAM College of Engineering and Technology</span>, Chennai — graduating April 2026 with a CGPA of <span className="text-foreground">8.94</span>.
         </p>
         <p>
-          I enjoy front-end development, data analysis, and automation. So far that's meant building React dashboards, writing Playwright tests, and turning messy CSVs into Tableau stories.
+          I enjoy full stack development, data analysis, and automation. So far that's meant building interactive websites, writing Playwright tests, and turning messy CSVs into Tableau stories.
         </p>
         <p>
           I'm a fresher looking for my first full-time role — open to jobs and entry-level opportunities where I can keep learning.
@@ -41,7 +41,7 @@ function About() {
               <p className="font-display text-lg">Loyola-ICAM CET</p>
               <span className="font-mono text-xs text-muted-foreground">2022 – 2026</span>
             </div>
-            <p className="mt-1 text-sm text-muted-foreground">B.Tech, Information Technology · CGPA 8.87</p>
+            <p className="mt-1 text-sm text-muted-foreground">B.Tech, Information Technology · CGPA 8.94</p>
           </div>
           <div className="rounded-xl border border-border bg-card p-5">
             <div className="flex items-baseline justify-between gap-4">
@@ -74,22 +74,6 @@ function About() {
           ))}
         </div>
       </section>
-
-      {/* Certifications */}
-      <section className="mt-14">
-        <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Certifications</p>
-        <ul className="mt-4 space-y-3">
-          {certs.map((c) => (
-            <li key={c.name} className="flex items-baseline justify-between gap-4 border-b border-border pb-3">
-              <div>
-                <p className="font-medium">{c.name}</p>
-                <p className="text-sm text-muted-foreground">{c.org}</p>
-              </div>
-              <span className="font-mono text-xs text-muted-foreground">{c.date}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
     </main>
   );
 }
@@ -100,8 +84,3 @@ const skillGroups = [
   { label: "Tools", items: ["Playwright", "Tableau", "MySQL", "Figma", "Git"] },
 ];
 
-const certs = [
-  { date: "Apr 2026", name: "Web Development Fundamentals", org: "IBM" },
-  { date: "Mar 2026", name: "Oracle AI Foundations Associate", org: "Oracle" },
-  { date: "Jun 2025", name: "The Complete Ruby on Rails Developer", org: "Udemy" },
-];

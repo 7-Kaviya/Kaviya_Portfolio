@@ -44,9 +44,9 @@ function Home() {
       {/* Quick facts */}
       <section className="mt-16 grid gap-8 border-t border-border pt-10 sm:grid-cols-2 md:mt-20 md:grid-cols-3">
         {[
-          { k: "Education", v: "B.Tech IT, Loyola-ICAM", sub: "CGPA 8.87 · 2022 – 2026" },
+          { k: "Education", v: "B.Tech IT, Loyola-ICAM", sub: "CGPA 8.94 · 2022 – 2026" },
           { k: "Based in", v: "Tamil Nadu, India", sub: "Open to remote / relocate" },
-          { k: "Currently", v: "Looking for jobs", sub: "Front-end · Data · QA" },
+          { k: "Currently", v: "Looking for jobs", sub: "Full stack · Data · QA" },
         ].map((f) => (
           <div key={f.k}>
             <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{f.k}</p>
@@ -99,7 +99,7 @@ function Home() {
 }
 
 const featured = [
-  { title: "Finalysis", tag: "Finance Dashboard", year: "2026", blurb: "React + TS dashboard with charts, dark mode, and CRUD." },
+  { title: "Nexus Platform", tag: "Full stack", year: "2026", blurb: "Angular + Node.js + Express + TypeScript with role-based authentication and JWT security." },
   { title: "Fraud Detection", tag: "ML Project", year: "2026", blurb: "Online-learning model that flags suspicious transactions." },
   { title: "Finsire Replica", tag: "Front-end", year: "2026", blurb: "Component-based React rebuild of a marketing site." },
   { title: "OrangeHRM Tests", tag: "Automation", year: "2026", blurb: "End-to-end Playwright test suites — internship work." },

@@ -7,6 +7,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/work", label: "Work" },
+  { to: "/certifications", label: "Certifications" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -38,10 +39,10 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Kaviya V — Developer & Designer" },
-      { name: "description", content: "Portfolio of Kaviya V — IT Graduate, full-stack developer, and data enthusiast based in Tamil Nadu, India." },
+      { name: "description", content: "Portfolio of Kaviya V — IT Graduate, full-stack developer, and data analyst based in Tamil Nadu, India." },
       { name: "author", content: "Kaviya V" },
       { property: "og:title", content: "Kaviya V — Developer & Designer" },
-      { property: "og:description", content: "Portfolio of Kaviya V — IT Graduate, full-stack developer, and data enthusiast." },
+      { property: "og:description", content: "Portfolio of Kaviya V — IT Graduate, full-stack developer, and data analyst." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -149,7 +150,7 @@ function SiteHeader() {
               onClick={() => setOpen(false)}
               className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-2 text-sm font-medium text-accent-foreground"
             >
-              Resume ↗
+              Resume
             </a>
           </div>
         </nav>
