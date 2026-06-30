@@ -80,7 +80,7 @@ function About() {
 
 const skillGroups = [
   { label: "Languages", items: ["Python", "Java", "TypeScript", "JavaScript", "SQL", "HTML/CSS"] },
-  { label: "Frameworks", items: ["React", "React Native", "Flutter", "Pandas", "NumPy"] },
+  { label: "Frameworks", items: ["Django", "React", "Express"] },
   { label: "Tools", items: ["Playwright", "Tableau", "MySQL", "Figma", "Git"] },
 ];
 

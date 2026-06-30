@@ -133,6 +133,21 @@ const experience = [
 
 const projects = [
   {
+  title: "Language Translator",
+  tag: "Web App",
+  image: "/Translator.png",
+  url: "https://github.com/7-Kaviya/Language-Translator---Django",
+  period: "Jun 2026",
+  summary: "A multilingual web application that translates text into multiple languages through an intuitive and responsive interface.",
+  bullets: [
+    "Developed a language translation web application using Django and Python with support for multiple languages.",
+    "Designed a responsive and user-friendly interface using HTML and CSS for seamless translation experience.",
+    "Integrated translation APIs to convert user-entered text into selected target languages in real time.",
+    "Implemented form handling, server-side processing, and dynamic rendering of translated content using Django templates."
+  ],
+  stack: ["Python", "Django", "HTML", "CSS", "Translation API"],
+},
+  {
     title: "Nexux Platform",
     tag: "Web App",
     image: "/nexus.png",

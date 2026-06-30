@@ -60,7 +60,7 @@ function Home() {
       <section className="mt-16">
         <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Toolbox</p>
         <div className="mt-4 flex flex-wrap gap-2">
-          {["React", "TypeScript", "JavaScript", "Python", "Java", "SQL", "Tailwind", "Playwright", "Tableau", "Flutter", "Figma", "Pandas"].map((s) => (
+          {["React", "TypeScript", "JavaScript", "Python", "Java", "SQL", "Django", "Tailwind", "Playwright", "Tableau", "Figma"].map((s) => (
             <span key={s} className="rounded-full border border-border bg-card px-3 py-1 text-sm">{s}</span>
           ))}
         </div>
@@ -99,8 +99,8 @@ function Home() {
 }
 
 const featured = [
+  { title: "Language Translator", tag: "Full stack", year: "2026", blurb: "Django-based multilingual translator that converts text across multiple languages." },
   { title: "Nexus Platform", tag: "Full stack", year: "2026", blurb: "Angular + Node.js + Express + TypeScript with role-based authentication and JWT security." },
   { title: "Fraud Detection", tag: "ML Project", year: "2026", blurb: "Online-learning model that flags suspicious transactions." },
-  { title: "Finsire Replica", tag: "Front-end", year: "2026", blurb: "Component-based React rebuild of a marketing site." },
   { title: "OrangeHRM Tests", tag: "Automation", year: "2026", blurb: "End-to-end Playwright test suites — internship work." },
 ];
